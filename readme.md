@@ -3,7 +3,7 @@
 </div>
 
 [![GitHub](https://img.shields.io/github/license/shieldforce/frame-devs?style=for-the-badge)](https://github.com/Shieldforce/frame-devs/blob/main/LICENSE)
-![Packagist Version](https://img.shields.io/packagist/v/alexandrefn/frame-devs?style=for-the-badge)
+[![Packagist Version](https://img.shields.io/packagist/v/alexandrefn/frame-devs?style=for-the-badge)](https://packagist.org/packages/alexandrefn/frame-devs)
 
 <h2 style="text-align: center;">Framework to Devs</h2>
 
