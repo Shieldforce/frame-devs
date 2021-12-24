@@ -11,7 +11,8 @@
             "ManagerUser\\": "managerUser/"
         },
         "files": [
-            "managerUser/services/helpers/global.php"
+            "managerUser/services/helpers/global.php",
+            "src/helpers/defaults.php"
         ]
     },
     "authors": [
@@ -22,6 +23,8 @@
         }
     ],
     "require": {
-        "php" : ">7.4"
+        "php" : ">7.4",
+        "ext-mbstring": "*",
+        "jenssegers/blade": "^1.4"
     }
 }
