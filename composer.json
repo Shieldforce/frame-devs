@@ -1,6 +1,6 @@
 {
     "name": "alexandrefn/frame-devs",
-    "description": "Um framework para ajudar os devs",
+    "description": "The framework will be help to developers",
     "type": "project",
     "license": "mit",
     "autoload": {

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c232b7-0715-4c15-b239-dcf36ad1da3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +25,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="improving-readme" />
-                    <option name="lastUsedInstant" value="1640366784" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1640366863" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1640366547" />
+                    <option name="branchName" value="improving-readme" />
+                    <option name="lastUsedInstant" value="1640366784" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="editing-readme-licence" />
@@ -77,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640364132845</updated>
-      <workItem from="1640364135093" duration="2280000" />
+      <workItem from="1640364135093" duration="2510000" />
     </task>
     <servers />
   </component>
