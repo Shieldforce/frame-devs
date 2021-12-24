@@ -6,8 +6,13 @@
     "minimum-stability": "beta",
     "autoload": {
         "psr-4": {
-            "Alexandrefn\\FrameDevs\\": "src/"
-        }
+            "Core\\": "src/",
+            "AccessExternal\\": "accessExternal/",
+            "ManagerUser\\": "managerUser/"
+        },
+        "files": [
+            "managerUser/services/helpers/global.php"
+        ]
     },
     "authors": [
         {

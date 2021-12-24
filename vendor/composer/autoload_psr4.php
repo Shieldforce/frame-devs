@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Alexandrefn\\FrameDevs\\' => array($baseDir . '/src'),
+    'ManagerUser\\' => array($baseDir . '/managerUser'),
+    'Core\\' => array($baseDir . '/src'),
+    'AccessExternal\\' => array($baseDir . '/accessExternal'),
 );
