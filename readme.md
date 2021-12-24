@@ -13,11 +13,11 @@
 
 
 # Description
-<p>
-    teste
+<p id="Description">
+    This project will be of help to developers.
 </p>
 
-# BuildTheProject
-<p>
-    teste
+# Build The Project
+<p id="BuildTheProject">
+    To starting, let's type these commands:
 </p>
