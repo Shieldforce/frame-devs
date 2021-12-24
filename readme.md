@@ -21,3 +21,7 @@
 <p id="BuildTheProject">
     To starting, let's type these commands:
 </p>
+
+```
+$: git clone https://github.com/Shieldforce/frame-devs.git
+```
