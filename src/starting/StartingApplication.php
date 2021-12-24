@@ -2,13 +2,12 @@
 
 namespace Core\starting;
 
-/**
- * Class StartingApplication
- * @package Core\starting
- */
-class StartingApplication
+use Core\interfaces\starting\startingApplication\InterfaceStartingApplication;
+use Core\interfaces\starting\startingRequest\InterfaceStartingRequest;
+
+class StartingApplication implements InterfaceStartingApplication
 {
-    public static function startingClassesBootable()
+    public static function startingClassesBootable(InterfaceStartingRequest $startingRequest)
     {
 
     }
