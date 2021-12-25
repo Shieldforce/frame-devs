@@ -17,3 +17,8 @@ function app($param)
     ];
     return $array[$param] ?? null;
 }
+
+function csrf_token()
+{
+   // return $_SESSION["_token"];
+}

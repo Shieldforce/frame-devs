@@ -2,7 +2,9 @@
 
 namespace Core\interfaces\starting\startingRequest;
 
+use Core\interfaces\starting\startingShieldForce\InterfaceStartingShieldForce;
+
 interface InterfaceStartingRequest
 {
-    public static function starting(InterfaceStartingRequest $startingRequest);
+    public function starting(InterfaceStartingShieldForce $startingShieldForce);
 }

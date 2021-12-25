@@ -2,7 +2,9 @@
 
 namespace Core\interfaces\starting\startingRoutes;
 
+use Core\interfaces\starting\startingRequest\InterfaceStartingRequest;
+
 interface InterfaceStartingRoutes
 {
-    public static function starting(InterfaceStartingRoutes $startingRoutes);
+    public function starting(InterfaceStartingRequest $startingRequest);
 }
