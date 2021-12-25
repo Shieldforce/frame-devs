@@ -51,10 +51,15 @@ class StartingApplication implements InterfaceStartingApplication
         $this->startingRoutes = $securityTwo;
         $this->startingRequest = $securityThree;
 
+
+        // controllers
+
+
+        $renderHtml = new \Core\templates\html\Render(new \Core\templates\html\RenderBlade());
+        $renderHtml->getTemplateEngine()->render("site.main.index", []);
+
         //$request = new \Core\requests\Request();
         //$request->starting($this);
-
-
 
         return $this;
         //
