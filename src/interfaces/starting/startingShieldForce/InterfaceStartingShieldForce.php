@@ -4,5 +4,5 @@ namespace Core\interfaces\starting\startingShieldForce;
 
 interface InterfaceStartingShieldForce
 {
-    public function starting($server, $get, $post, $request, $csrf_token);
+    public function starting($server, $get, $post, $request);
 }

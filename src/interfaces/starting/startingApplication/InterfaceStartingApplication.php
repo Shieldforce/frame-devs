@@ -10,7 +10,7 @@ interface InterfaceStartingApplication
 {
     public static function startingClassesBootable(
         InterfaceStartingShieldForce $shieldForce,
-        InterfaceStartingRequest $startingRequest,
-        InterfaceStartingRoutes $startingRoutes
+        InterfaceStartingRoutes $startingRoutes,
+        InterfaceStartingRequest $startingRequest
     );
 }

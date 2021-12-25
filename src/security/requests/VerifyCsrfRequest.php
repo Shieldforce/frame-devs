@@ -28,8 +28,8 @@ class VerifyCsrfRequest extends AbstractTypeSecurity
     private function condition()
     {
         $method = $this->startingShieldForce->server["REQUEST_METHOD"];
-        $array  = $this->startingShieldForce->request ?? [];
-        $token  = $array["_token"] ?? null;
+        $array = $this->startingShieldForce->request ?? [];
+        $token = $array["_token"] ?? null;
         return count($array) > 0 && $token!=csrf_token() && $method=="POST";
     }
 }

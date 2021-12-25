@@ -13,7 +13,6 @@ class StartingApplication implements InterfaceStartingApplication
     protected $get;
     protected $post;
     protected $request;
-    protected $csrf_token;
 
     public function __construct()
     {
@@ -21,13 +20,12 @@ class StartingApplication implements InterfaceStartingApplication
         $this->get = $_GET;
         $this->post = $_POST;
         $this->request = $_REQUEST;
-        $this->csrf_token = $_SESSION["_token"];
     }
 
     public static function startingClassesBootable(
         InterfaceStartingShieldForce $startingShieldForce,
-        InterfaceStartingRequest $startingRequest,
-        InterfaceStartingRoutes $startingRoutes
+        InterfaceStartingRoutes $startingRoutes,
+        InterfaceStartingRequest $startingRequest
     )
     {
         // Security One
@@ -35,14 +33,18 @@ class StartingApplication implements InterfaceStartingApplication
             (new StartingApplication)->server,
             (new StartingApplication)->get,
             (new StartingApplication)->post,
-            (new StartingApplication)->request,
-            (new StartingApplication)->csrf_token,
+            (new StartingApplication)->request
         );
 
         // Security Two
-        //$securityTwo = $startingRequest::starting($securityOne);
+        $securityTwo = $startingRoutes->starting(
+            (new StartingApplication)->server,
+            (new StartingApplication)->get,
+            (new StartingApplication)->post,
+            (new StartingApplication)->request
+        );
 
         // Security Three
-        //$securityThree = $startingRoutes::starting($securityTwo);
+        //$securityThree = $startingRequest::starting();
     }
 }

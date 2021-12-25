@@ -30,14 +30,6 @@ class VerifyCsrfPost extends AbstractTypeSecurity
         $method = $this->startingShieldForce->server["REQUEST_METHOD"];
         $array = $this->startingShieldForce->post ?? [];
         $token = $array["_token"] ?? null;
-
-        /*if($method=="POST")
-        {
-            var_dump($token, csrf_token());
-            die;
-        }*/
-
-
-        return count($array) > 0 && $token!=$this->startingShieldForce->csrf_token && $method=="POST";
+        return count($array) > 0 && $token!=csrf_token() && $method=="POST";
     }
 }

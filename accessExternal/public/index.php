@@ -5,17 +5,15 @@ include "../../vendor/autoload.php";
 
 try {
 
-    //$_SESSION["_token"] = ( !isset($_SESSION["_token"]) ) ? hash("sha512", rand(100, 1000)) : $_SESSION["_token"];
-
     $startApplication = new \Core\starting\StartingApplication();
     $startApplication::startingClassesBootable(
         new \Core\starting\StartingShieldForce(),
-        new \Core\starting\StartingRequest(),
         new \Core\starting\StartingRoutes(),
+        new \Core\starting\StartingRequest()
     );
 
-    $renderHtml = new \Core\templates\html\Render(new \Core\templates\html\RenderBlade());
-    $renderHtml->getTemplateEngine()->render("site.main.index", []);
+    //$renderHtml = new \Core\templates\html\Render(new \Core\templates\html\RenderBlade());
+    //$renderHtml->getTemplateEngine()->render("site.main.index", []);
 
 } catch (\Throwable $throwable) {
 

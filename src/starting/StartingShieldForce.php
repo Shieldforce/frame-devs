@@ -11,15 +11,13 @@ class StartingShieldForce implements InterfaceStartingShieldForce
     public $get;
     public $post;
     public $request;
-    public $csrf_token;
 
-    public function starting($server, $get, $post, $request, $csrf_token)
+    public function starting($server, $get, $post, $request)
     {
         $this->server = $server;
         $this->get = $get;
         $this->post = $post;
         $this->request = $request;
-        $this->csrf_token = $csrf_token;
         $addSecurityCustom = new AddSecurityCustom($this);
         $addSecurityCustom->implements();
     }

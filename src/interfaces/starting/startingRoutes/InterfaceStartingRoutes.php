@@ -2,9 +2,7 @@
 
 namespace Core\interfaces\starting\startingRoutes;
 
-use Core\interfaces\starting\startingRequest\InterfaceStartingRequest;
-
 interface InterfaceStartingRoutes
 {
-    public function starting(InterfaceStartingRequest $startingRequest);
+    public function starting($server, $get, $post, $request);
 }
