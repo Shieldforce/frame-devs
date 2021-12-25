@@ -8,7 +8,7 @@ use Core\interfaces\starting\startingShieldForce\InterfaceStartingShieldForce;
 
 interface InterfaceStartingApplication
 {
-    public static function startingClassesBootable(
+    public function startingClassesBootable(
         InterfaceStartingShieldForce $shieldForce,
         InterfaceStartingRoutes $startingRoutes,
         InterfaceStartingRequest $startingRequest

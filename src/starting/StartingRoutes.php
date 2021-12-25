@@ -10,12 +10,16 @@ use Core\routes\MappingOfTypeRoute;
 
 class StartingRoutes implements InterfaceStartingRoutes
 {
+
+    public AbstractRoute $abstractRoute;
+    public InterfaceStartingShieldForce $startingShieldForce;
+
     public function starting(InterfaceStartingShieldForce $startingShieldForce, AbstractRoute $abstractRoute)
     {
         $mappingType = MappingOfTypeRoute::execute($startingShieldForce);
         $methodCurrency = strtolower($mappingType);
         $mappingFile = new MappingFilesInDirectoryRoutes();
-        foreach ($mappingFile->mapping() as $index => $types)
+        foreach ($mappingFile->mapping() as $types)
         {
             foreach ($types as $indexType => $route)
             {
@@ -23,11 +27,13 @@ class StartingRoutes implements InterfaceStartingRoutes
                 {
                     $method = $attributes["method"];
                     $abstractRoute->setTypeRoute($indexType);
-                    $abstractRoute->$method($indexAttribute, $attributes["action"]);
+                    $abstractRoute->$method($indexAttribute, $attributes["action"], $method);
                 }
             }
         }
         $abstractRoute->setRouteCurrency($startingShieldForce, $methodCurrency);
+        $this->abstractRoute = $abstractRoute;
+        $this->startingShieldForce = $startingShieldForce;
         return $this;
     }
 }

@@ -2,7 +2,7 @@
 
 function asset($path)
 {
-    return "../".$path;
+    return "../../../../../../".$path;
 }
 
 function url($url)

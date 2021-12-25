@@ -6,11 +6,13 @@ include "../../vendor/autoload.php";
 try {
 
     $startApplication = new \Core\starting\StartingApplication();
-    $startApplication::startingClassesBootable(
+    $startApplication->startingClassesBootable(
         new \Core\starting\StartingShieldForce(),
         new \Core\starting\StartingRoutes(),
         new \Core\starting\StartingRequest()
     );
+
+
 
     $renderHtml = new \Core\templates\html\Render(new \Core\templates\html\RenderBlade());
     $renderHtml->getTemplateEngine()->render("site.main.index", []);

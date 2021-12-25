@@ -23,20 +23,13 @@ abstract class AbstractRoute
     }
 
     // Methods
-    abstract public function get($url, $action = []) : Route;
-    //abstract public static function post($url, array $action = []) : Route;
-    //abstract public static function delete($url, array $action = []) : Route;
-    //abstract public static function put($url, array $action = []) : Route;
-    //abstract public static function path($url, array $action = []) : Route;
-    //abstract public static function option($url, array $action = []) : Route;
-    //abstract public static function any($url, array $action = []) : Route;
-
-    // Helpers
-    //abstract public static function name($routeName) : Route;
-    //abstract public static function middleware($routeName) : Route;
-    //abstract public static function prefix($routeName) : Route;
-    //abstract public static function group($routeName) : Route;
-    //abstract public static function namespace($routeName) : Route;
+    abstract public function get($url, array $action = [], $method = null) : Route;
+    abstract public function post($url, array $action = [], $method = null) : Route;
+    abstract public function delete($url, array $action = []) : Route;
+    abstract public function put($url, array $action = []) : Route;
+    abstract public function path($url, array $action = []) : Route;
+    abstract public function option($url, array $action = []) : Route;
+    abstract public function any($url, array $action = []) : Route;
 
     public function setRouteList(Route $route) : Route
     {

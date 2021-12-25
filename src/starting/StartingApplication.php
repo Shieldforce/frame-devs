@@ -10,10 +10,13 @@ use Core\routes\Route;
 
 class StartingApplication implements InterfaceStartingApplication
 {
-    protected $server;
-    protected $get;
-    protected $post;
-    protected $request;
+    public $server;
+    public $get;
+    public $post;
+    public $request;
+    public $startingShieldForce;
+    public $startingRoutes;
+    public $startingRequest;
 
     public function __construct()
     {
@@ -23,7 +26,7 @@ class StartingApplication implements InterfaceStartingApplication
         $this->request = $_REQUEST;
     }
 
-    public static function startingClassesBootable(
+    public function startingClassesBootable(
         InterfaceStartingShieldForce $startingShieldForce,
         InterfaceStartingRoutes $startingRoutes,
         InterfaceStartingRequest $startingRequest
@@ -31,16 +34,29 @@ class StartingApplication implements InterfaceStartingApplication
     {
         // Security One
         $securityOne = $startingShieldForce->starting(
-            (new StartingApplication)->server,
-            (new StartingApplication)->get,
-            (new StartingApplication)->post,
-            (new StartingApplication)->request
+            $this->server,
+            $this->get,
+            $this->post,
+            $this->request
         );
 
         // Security Two
         $securityTwo = $startingRoutes->starting($securityOne, new Route(new StartingShieldForce));
 
         // Security Three
-        //$securityThree = $startingRequest::starting();
+        $securityThree = $startingRequest->starting($securityTwo);
+
+        // Init Classes Boot
+        $this->startingShieldForce = $securityOne;
+        $this->startingRoutes = $securityTwo;
+        $this->startingRequest = $securityThree;
+
+        //$request = new \Core\requests\Request();
+        //$request->starting($this);
+
+
+
+        return $this;
+        //
     }
 }

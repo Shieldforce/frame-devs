@@ -2,8 +2,18 @@
 
     return [
         //-----------------------------------
-        "/teste/{user}/{corporate}" => [
+        "/" => [
             "method" => "get",
+            "action" => [
+                "controller" => "teste777",
+                "middlewares" => [],
+                "name" => "name2",
+                "wheres" => [],
+            ]
+        ],
+        //-----------------------------------
+        "/teste" => [
+            "method" => "post",
             "action" => [
                 "controller" => "teste2",
                 "middlewares" => [],
