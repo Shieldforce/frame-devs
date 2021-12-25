@@ -6,6 +6,7 @@ use Core\interfaces\starting\startingApplication\InterfaceStartingApplication;
 use Core\interfaces\starting\startingRequest\InterfaceStartingRequest;
 use Core\interfaces\starting\startingRoutes\InterfaceStartingRoutes;
 use Core\interfaces\starting\startingShieldForce\InterfaceStartingShieldForce;
+use Core\routes\Route;
 
 class StartingApplication implements InterfaceStartingApplication
 {
@@ -37,12 +38,7 @@ class StartingApplication implements InterfaceStartingApplication
         );
 
         // Security Two
-        $securityTwo = $startingRoutes->starting(
-            (new StartingApplication)->server,
-            (new StartingApplication)->get,
-            (new StartingApplication)->post,
-            (new StartingApplication)->request
-        );
+        $securityTwo = $startingRoutes->starting($securityOne, new Route(new StartingShieldForce));
 
         // Security Three
         //$securityThree = $startingRequest::starting();

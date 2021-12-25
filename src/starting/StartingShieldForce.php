@@ -20,5 +20,6 @@ class StartingShieldForce implements InterfaceStartingShieldForce
         $this->request = $request;
         $addSecurityCustom = new AddSecurityCustom($this);
         $addSecurityCustom->implements();
+        return $this;
     }
 }

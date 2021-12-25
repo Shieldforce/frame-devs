@@ -12,8 +12,8 @@ try {
         new \Core\starting\StartingRequest()
     );
 
-    //$renderHtml = new \Core\templates\html\Render(new \Core\templates\html\RenderBlade());
-    //$renderHtml->getTemplateEngine()->render("site.main.index", []);
+    $renderHtml = new \Core\templates\html\Render(new \Core\templates\html\RenderBlade());
+    $renderHtml->getTemplateEngine()->render("site.main.index", []);
 
 } catch (\Throwable $throwable) {
 
@@ -25,5 +25,6 @@ try {
         "file" => $exception->getThrowable()->getFile(),
         "line" => $exception->getThrowable()->getLine(),
     ]);
+    die;
 
 }

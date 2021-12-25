@@ -20,6 +20,7 @@ function app($param)
 
 function csrf_token()
 {
+    //flush();
     session_start();
     $_SESSION["_token"] = ( !isset($_SESSION["_token"]) ) ? hash("sha512", rand(100, 1000)) : $_SESSION["_token"];
     return $_SESSION["_token"];
