@@ -32,3 +32,8 @@ function csrf_token($refresh=false)
     }
     return $_SESSION["_token"];
 }
+
+function envSystem($key, $value)
+{
+    return !isset($value) ? getenv($key) : putenv($key."=".$value);
+}

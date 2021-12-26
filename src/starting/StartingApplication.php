@@ -4,6 +4,7 @@ namespace Core\starting;
 
 use Core\controllers\Controllers;
 use Core\controllers\DividerControllerString;
+use Core\environments\StartingEnvironments;
 use Core\interfaces\starting\startingApplication\InterfaceStartingApplication;
 use Core\interfaces\starting\startingRequest\InterfaceStartingRequest;
 use Core\interfaces\starting\startingRoutes\InterfaceStartingRoutes;
@@ -34,6 +35,10 @@ class StartingApplication implements InterfaceStartingApplication
         InterfaceStartingRequest $startingRequest
     )
     {
+        // Starting Environments
+        $environments = new StartingEnvironments;
+        $environments->starting();
+
         // Security One
         $securityOne = $startingShieldForce->starting(
             $this->server,

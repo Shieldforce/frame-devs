@@ -8,6 +8,12 @@ class MainController extends Controller
 {
     public function index(array $array = [])
     {
+
+        echo "<pre>";
+        print_r(getenv());
+        echo "</pre>";
+
+
         return $this->view($this->routeCurrency["name"]);
     }
 
