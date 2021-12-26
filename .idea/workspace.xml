@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c232b7-0715-4c15-b239-dcf36ad1da3d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/managerUser/controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/managerUser/controllers/site/MainController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/managerUser/views/site/main/teste.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/Controllers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/DividerControllerString.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderErrors/Render.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accessExternal/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/accessExternal/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managerUser/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managerUser/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/defaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/defaults.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/starting/StartingApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/starting/StartingApplication.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +114,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/managerUser/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/managerUser/controllers/errors" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -115,11 +126,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/managerUser/controllers/errors" />
+      <recent name="$PROJECT_DIR$/managerUser/views/site/main" />
+      <recent name="$PROJECT_DIR$/managerUser/controllers" />
       <recent name="$PROJECT_DIR$/managerUser/routes" />
       <recent name="$PROJECT_DIR$/managerUser/views" />
-      <recent name="$PROJECT_DIR$/managerUser/views/site/main" />
-      <recent name="$PROJECT_DIR$/src/security/requests" />
-      <recent name="$PROJECT_DIR$/managerUser/security/requests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/routes/abstracts" />
@@ -138,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640364132845</updated>
       <workItem from="1640364135093" duration="49599000" />
-      <workItem from="1640467132933" duration="6781000" />
+      <workItem from="1640467132933" duration="14353000" />
     </task>
     <servers />
   </component>

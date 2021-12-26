@@ -19,15 +19,18 @@ class Route extends AbstractRoute
             $dividerUrlRoute = explode("/", $urlRoute);
             unset($dividerUrlServer[0]);
             unset($dividerUrlRoute[0]);
+            $params = [];
             foreach ($dividerUrlServer as $index => $routeS)
             {
                 if($routeS==$dividerUrlRoute[$index])
                 {
                     $dividerUrlRoute[$index] = $routeS;
+                    $params[] = $routeS;
                 }
                 if($routeS!=$dividerUrlRoute[$index] && strpos($dividerUrlRoute[$index], '{') !== false)
                 {
                     $dividerUrlRoute[$index] = $routeS;
+                    $params[] = $routeS;
                 }
             }
             $mountUrlServer = implode("/", $dividerUrlServer);
@@ -36,6 +39,7 @@ class Route extends AbstractRoute
             {
                 if(strtoupper($methodCurrency)==strtoupper($route["method"]))
                 {
+                    $route["params"] = $params;
                     $this->routeCurrency = $route;
                 }
             }

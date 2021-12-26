@@ -2,6 +2,8 @@
 
 namespace Core\starting;
 
+use Core\controllers\Controllers;
+use Core\controllers\DividerControllerString;
 use Core\interfaces\starting\startingApplication\InterfaceStartingApplication;
 use Core\interfaces\starting\startingRequest\InterfaceStartingRequest;
 use Core\interfaces\starting\startingRoutes\InterfaceStartingRoutes;
@@ -51,15 +53,13 @@ class StartingApplication implements InterfaceStartingApplication
         $this->startingRoutes = $securityTwo;
         $this->startingRequest = $securityThree;
 
-
         // controllers
-
-
-        $renderHtml = new \Core\templates\html\Render(new \Core\templates\html\RenderBlade());
-        $renderHtml->getTemplateEngine()->render("site.main.index", []);
-
-        //$request = new \Core\requests\Request();
-        //$request->starting($this);
+        $dividerController = DividerControllerString::execute($this->startingRequest->routeCurrency["action"]);
+        $class = "ManagerUser\\controllers\\".$dividerController["controller"];
+        $controller = $class;
+        $method = $dividerController["method"];
+        $class = new $controller($this);
+        $class->$method($this->startingRequest->routeCurrency["params"]);
 
         return $this;
         //

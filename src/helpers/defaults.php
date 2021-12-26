@@ -18,10 +18,17 @@ function app($param)
     return $array[$param] ?? null;
 }
 
-function csrf_token()
+function csrf_token($refresh=false)
 {
-    //flush();
-    session_start();
-    $_SESSION["_token"] = ( !isset($_SESSION["_token"]) ) ? hash("sha512", rand(100, 1000)) : $_SESSION["_token"];
+    if($refresh)
+    {
+        session_start();
+        $_SESSION["_token"] = hash("sha512", rand(100, 1000));
+    }
+    else
+    {
+        session_start();
+        $_SESSION["_token"] = ( !isset($_SESSION["_token"]) ) ? hash("sha512", rand(100, 1000)) : $_SESSION["_token"];
+    }
     return $_SESSION["_token"];
 }

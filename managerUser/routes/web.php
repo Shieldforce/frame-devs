@@ -2,12 +2,12 @@
 
     return [
         //-----------------------------------
-        "/" => [
+        "/{user_id}/{com_id}" => [
             "method" => "get",
             "action" => [
-                "controller" => "teste777",
+                "controller" => "site\MainController@index",
                 "middlewares" => [],
-                "name" => "name2",
+                "name" => "site.main.index",
                 "wheres" => [],
             ]
         ],
@@ -15,20 +15,10 @@
         "/teste" => [
             "method" => "post",
             "action" => [
-                "controller" => "teste2",
+                "controller" => "site\MainController@teste",
                 "middlewares" => [],
-                "name" => "name2",
+                "name" => "site.main.teste",
                 "wheres" => [],
             ]
         ],
-        //-----------------------------------
-        "/teste2" => [
-            "method" => "get",
-            "action" => [
-                "controller" => "teste3",
-                "middlewares" => [],
-                "name" => "name3",
-                "wheres" => [],
-            ]
-        ]
     ];
