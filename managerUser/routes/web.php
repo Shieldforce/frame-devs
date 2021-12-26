@@ -2,7 +2,7 @@
 
     return [
         //-----------------------------------
-        "/{user_id}/{com_id}" => [
+        "/" => [
             "method" => "get",
             "action" => [
                 "controller" => "site\MainController@index",
@@ -12,12 +12,12 @@
             ]
         ],
         //-----------------------------------
-        "/teste" => [
+        "/create-user" => [
             "method" => "post",
             "action" => [
-                "controller" => "site\MainController@teste",
+                "controller" => "site\MainController@createUser",
                 "middlewares" => [],
-                "name" => "site.main.teste",
+                "name" => "site.main.createUser",
                 "wheres" => [],
             ]
         ],

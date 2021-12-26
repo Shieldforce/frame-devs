@@ -1,4 +1,4 @@
-<form action="/teste" method="POST">
+<form action="/create-user" method="POST">
     <input type="hidden" name="_method" value="post">
     <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
     <label class="col-12">

@@ -11,9 +11,13 @@ class MainController extends Controller
         return $this->view($this->routeCurrency["name"]);
     }
 
-    public function teste(array $array = [])
+    public function createUser(array $array = [])
     {
         $request = $this->request;
-        // Retornar resposta;
+
+        echo "<pre>";
+        print_r($request->post);
+        echo "</pre>";
+
     }
 }
