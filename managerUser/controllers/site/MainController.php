@@ -13,11 +13,8 @@ class MainController extends Controller
 
     public function createUser(array $array = [])
     {
-        $request = $this->request;
-
         echo "<pre>";
-        print_r($request->post);
+        var_dump($this->request["post"]);
         echo "</pre>";
-
     }
 }

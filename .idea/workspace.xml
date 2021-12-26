@@ -4,11 +4,6 @@
     <list default="true" id="15c232b7-0715-4c15-b239-dcf36ad1da3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managerUser/controllers/site/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/controllers/site/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/storage/views/cache/29382d73a7812fa59f547e46becb85a982a38e37.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/storage/views/cache/29382d73a7812fa59f547e46becb85a982a38e37.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/storage/views/cache/517aa546496c32fb96117576ab8b885e5fa91e66.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/views/site/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/views/site/main/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/views/site/main/teste.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640364132845</updated>
       <workItem from="1640364135093" duration="49599000" />
-      <workItem from="1640467132933" duration="14792000" />
+      <workItem from="1640467132933" duration="15155000" />
     </task>
     <servers />
   </component>
