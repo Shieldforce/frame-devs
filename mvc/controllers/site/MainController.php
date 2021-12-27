@@ -1,9 +1,9 @@
 <?php
 
-namespace ManagerUser\controllers\site;
+namespace MVC\controllers\site;
 
-use ManagerUser\controllers\Controller;
-use ManagerUser\models\User;
+use MVC\controllers\Controller;
+use MVC\models\User;
 
 class MainController extends Controller
 {

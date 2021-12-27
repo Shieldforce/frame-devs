@@ -5,7 +5,7 @@ namespace Core\routes;
 class MappingFilesInDirectoryRoutes
 {
 
-    public $directoryFiles = "../../managerUser/routes";
+    public $directoryFiles = "../../mvc/routes";
 
     public function verifyIfFileExist($file)
     {

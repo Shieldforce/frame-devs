@@ -14,7 +14,7 @@ class RenderBlade implements InterfaceRenderTemplateEngine
     {
         $this->routeName = null;
         $this->blade   = new Blade(
-            '../../managerUser/views',
+            '../../mvc/views',
             '../../managerUser/storage/views/cache'
         );
     }

@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/accessExternal" isTestSource="false" packagePrefix="AccessExternal\" />
       <sourceFolder url="file://$MODULE_DIR$/managerUser" isTestSource="false" packagePrefix="ManagerUser\" />
+      <sourceFolder url="file://$MODULE_DIR$/mvc" isTestSource="false" packagePrefix="MVC\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/collections" />

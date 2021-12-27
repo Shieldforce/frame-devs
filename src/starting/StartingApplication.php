@@ -66,7 +66,7 @@ class StartingApplication implements InterfaceStartingApplication
 
         // controllers
         $dividerController = DividerControllerString::execute($this->startingRequest->routeCurrency["action"]);
-        $class = "ManagerUser\\controllers\\".$dividerController["controller"];
+        $class = "MVC\\controllers\\".$dividerController["controller"];
         $controller = $class;
         $method = $dividerController["method"];
         $class = new $controller($this);

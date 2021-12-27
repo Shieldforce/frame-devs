@@ -39,6 +39,7 @@ class ComposerStaticInite7d1d8cf9a7da469dfb140b6fbd4f045
         'M' => 
         array (
             'ManagerUser\\' => 12,
+            'MVC\\' => 4,
         ),
         'J' => 
         array (
@@ -106,6 +107,10 @@ class ComposerStaticInite7d1d8cf9a7da469dfb140b6fbd4f045
         'ManagerUser\\' => 
         array (
             0 => __DIR__ . '/../..' . '/managerUser',
+        ),
+        'MVC\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/mvc',
         ),
         'Jenssegers\\Blade\\' => 
         array (

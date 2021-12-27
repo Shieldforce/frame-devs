@@ -1,6 +1,6 @@
 <?php
 
-namespace ManagerUser\models;
+namespace MVC\models;
 
 use Core\models\abstracts\Model;
 

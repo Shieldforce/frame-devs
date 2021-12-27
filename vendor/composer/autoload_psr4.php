@@ -15,6 +15,7 @@ return array(
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'ManagerUser\\' => array($baseDir . '/managerUser'),
+    'MVC\\' => array($baseDir . '/mvc'),
     'Jenssegers\\Blade\\' => array($vendorDir . '/jenssegers/blade/src'),
     'Illuminate\\View\\' => array($vendorDir . '/illuminate/view'),
     'Illuminate\\Support\\' => array($vendorDir . '/illuminate/collections', $vendorDir . '/illuminate/macroable', $vendorDir . '/illuminate/support'),

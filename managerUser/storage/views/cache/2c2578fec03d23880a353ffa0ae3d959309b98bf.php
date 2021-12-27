@@ -16,4 +16,4 @@
         <input type="number" name="age" class="col-12 form-control"/>
     </label>
     <button type="submit" class="btn btn-danger">Enviar</button>
-</form><?php /**PATH /home/alexandrefn/projects/frame-devs/managerUser/views/site/main/index.blade.php ENDPATH**/ ?>
+</form><?php /**PATH /home/alexandrefn/projects/frame-devs/mvc/views/site/main/index.blade.php ENDPATH**/ ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace ManagerUser\controllers;
+namespace MVC\controllers;
 
 use Core\controllers\Controllers;
 use Core\templates\html\Render;
