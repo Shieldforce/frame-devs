@@ -5,7 +5,7 @@ namespace ManagerUser\security\requests;
 use Core\abstracts\security\requests\AbstractTypeSecurity;
 use Core\starting\StartingShieldForce;
 
-class AddSlashesCustom extends AbstractTypeSecurity
+class AddPlusSecurityCustom extends AbstractTypeSecurity
 {
     public function execute() : StartingShieldForce
     {

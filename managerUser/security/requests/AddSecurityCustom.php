@@ -32,6 +32,6 @@ class AddSecurityCustom
         // End Default System --------------------------------------------------
 
         // Add amount of custom
-        new AddSecurity(new AddSlashesCustom($this->startingShieldForce));
+        new AddSecurity(new AddPlusSecurityCustom($this->startingShieldForce));
     }
 }
