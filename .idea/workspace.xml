@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c232b7-0715-4c15-b239-dcf36ad1da3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/managerUser/connection/Postgre.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/managerUser/connection/SelectDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/managerUser/models/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collections/AbstractArrayAccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collections/Collections.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connections/DB.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connections/drivers/Mysql.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connections/interfaces/InterfaceDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/abstracts/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managerUser/connection/Postgre.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/connection/Postgre.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managerUser/controllers/site/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/controllers/site/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managerUser/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/storage/views/cache/29382d73a7812fa59f547e46becb85a982a38e37.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/storage/views/cache/29382d73a7812fa59f547e46becb85a982a38e37.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/views/errors/main/throwableDefault.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/views/errors/main/throwableDefault.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managerUser/views/site/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/managerUser/views/site/main/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connections/mysql/PDOConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/connections/PDOConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/project_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/project_config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Controllers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/defaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/defaults.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/MappingOfTypeRoute.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/MappingOfTypeRoute.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/starting/StartingApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/starting/StartingApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connections/drivers/Mysql.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/connections/drivers/Mysql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/abstracts/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/abstracts/Model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640364132845</updated>
       <workItem from="1640364135093" duration="49599000" />
-      <workItem from="1640467132933" duration="46666000" />
+      <workItem from="1640467132933" duration="47994000" />
     </task>
     <servers />
   </component>

@@ -9,12 +9,10 @@ class MainController extends Controller
 {
     public function index(array $array = [])
     {
-
-        /*$user = new User();
-
         echo "<pre>";
-        var_dump($user->find(147));
-        echo "</pre>";*/
+        var_dump(User::all());
+        echo "</pre>";
+
         return $this->view($this->routeCurrency["name"]);
     }
 
@@ -35,6 +33,15 @@ class MainController extends Controller
 
         echo "<pre>";
         var_dump($user->object->name);
+        echo "</pre>";
+    }
+
+    public function deleteUser(array $array = [])
+    {
+        $user = User::delete($array[1]);
+
+        echo "<pre>";
+        var_dump($user);
         echo "</pre>";
     }
 }

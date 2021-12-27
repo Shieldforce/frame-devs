@@ -31,4 +31,14 @@
                 "wheres" => [],
             ]
         ],
+        //-----------------------------------
+        "/delete-user/{user_id}" => [
+            "method" => "get",
+            "action" => [
+                "controller" => "site\MainController@deleteUser",
+                "middlewares" => [],
+                "name" => "site.main.deleteUser",
+                "wheres" => [],
+            ]
+        ],
     ];

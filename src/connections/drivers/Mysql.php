@@ -101,6 +101,25 @@ class Mysql implements InterfaceDriver
         return $class->find($table, $id);
     }
 
+    public static function all($table, string $columns="*", array $binds = [])
+    {
+        $class = new static();
+        $pdo = $class->connection();
+        $select = $pdo->prepare("SELECT {$columns} FROM {$table};");
+        $select->execute();
+        return $select->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function delete(string $table, string $id)
+    {
+        $class = new static();
+        $pdo = $class->connection();
+        $primaryKeyTable = $class->primaryKeyTable($table);
+        $insert = $pdo->prepare("DELETE FROM {$table} WHERE {$primaryKeyTable}=:{$primaryKeyTable};");
+        $array[$primaryKeyTable] = $id;
+        return $insert->execute($array);
+    }
+
     private function primaryKeyTable($table)
     {
         $class = new static();

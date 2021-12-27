@@ -41,6 +41,21 @@ class Model
         return $collection;
     }
 
+    public static function delete(string $id)
+    {
+        $class = new static();
+        $execute = $class->driver->delete($class->table, $id);
+        return $execute;
+    }
+
+    public static function all($columns = "*", $returnColumns = [])
+    {
+        $class = new static();
+        $execute = $class->driver->all($class->table, $columns = "*", $returnColumns = []);
+        $collection = $execute!=false ? new Collections($execute) : null;
+        return $collection;
+    }
+
     public function columnsVerify(array $array) : array
     {
         $class = new static();
