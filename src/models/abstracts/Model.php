@@ -51,7 +51,7 @@ class Model
     public static function all($columns = "*", $returnColumns = [])
     {
         $class = new static();
-        $execute = $class->driver->all($class->table, $columns = "*", $returnColumns = []);
+        $execute = $class->driver->all($class->table, $columns, $returnColumns);
         $collection = $execute!=false ? new Collections($execute) : null;
         return $collection;
     }

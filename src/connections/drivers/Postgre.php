@@ -1,6 +1,6 @@
 <?php
 
-namespace ManagerUser\connection;
+namespace Core\connections\drivers;
 
 use Core\connections\interfaces\InterfaceDriver;
 use PDO;
@@ -82,7 +82,7 @@ class Postgre implements InterfaceDriver
         $insert = $pdo->prepare("INSERT INTO {$table} ({$columns}) VALUES ({$mountNames});");
         $insert->execute($array);
         $primaryKey = $pdo->lastInsertId();
-        return $class::find($table, $primaryKey);
+        return $class->find($table, $primaryKey);
     }
 
     public static function edit(string $table, string $id, array $array = [])
@@ -110,6 +110,15 @@ class Postgre implements InterfaceDriver
         $insert = $pdo->prepare("DELETE FROM {$table} WHERE {$primaryKeyTable}=:{$primaryKeyTable};");
         $array[$primaryKeyTable] = $id;
         return $insert->execute($array);
+    }
+
+    public static function all($table, string $columns="*", array $binds = [])
+    {
+        $class = new static();
+        $pdo = $class->connection();
+        $select = $pdo->prepare("SELECT {$columns} FROM {$table};");
+        $select->execute($binds);
+        return $select->fetchAll(PDO::FETCH_ASSOC);
     }
 
     private function primaryKeyTable($table)

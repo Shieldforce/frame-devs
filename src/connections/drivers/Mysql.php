@@ -106,7 +106,7 @@ class Mysql implements InterfaceDriver
         $class = new static();
         $pdo = $class->connection();
         $select = $pdo->prepare("SELECT {$columns} FROM {$table};");
-        $select->execute();
+        $select->execute($binds);
         return $select->fetchAll(PDO::FETCH_ASSOC);
     }
 
