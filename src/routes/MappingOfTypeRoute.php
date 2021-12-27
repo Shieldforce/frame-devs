@@ -10,8 +10,8 @@ class MappingOfTypeRoute
 
     public static function execute(InterfaceStartingShieldForce $startingShieldForce)
     {
-        $typeServer = (new MappingOfTypeRoute())->verifyPostOrGet($startingShieldForce);
-        $typeAction = (new MappingOfTypeRoute())->actionTypePostOrGet($startingShieldForce, $typeServer);
+        $typeServer = (new static())->verifyPostOrGet($startingShieldForce);
+        $typeAction = (new static())->actionTypePostOrGet($startingShieldForce, $typeServer);
         return $typeAction;
     }
 

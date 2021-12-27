@@ -21,4 +21,14 @@
                 "wheres" => [],
             ]
         ],
+        //-----------------------------------
+        "/edit-user/{user_id}" => [
+            "method" => "post",
+            "action" => [
+                "controller" => "site\MainController@editUser",
+                "middlewares" => [],
+                "name" => "site.main.editUser",
+                "wheres" => [],
+            ]
+        ],
     ];

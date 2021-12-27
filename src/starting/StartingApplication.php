@@ -2,7 +2,7 @@
 
 namespace Core\starting;
 
-use Core\controllers\Controllers;
+use Core\connections\PDOConnection;
 use Core\controllers\DividerControllerString;
 use Core\environments\StartingEnvironments;
 use Core\interfaces\starting\startingApplication\InterfaceStartingApplication;
@@ -10,6 +10,7 @@ use Core\interfaces\starting\startingRequest\InterfaceStartingRequest;
 use Core\interfaces\starting\startingRoutes\InterfaceStartingRoutes;
 use Core\interfaces\starting\startingShieldForce\InterfaceStartingShieldForce;
 use Core\routes\Route;
+use ManagerUser\connection\SelectDriver;
 
 class StartingApplication implements InterfaceStartingApplication
 {
@@ -20,6 +21,7 @@ class StartingApplication implements InterfaceStartingApplication
     public $startingShieldForce;
     public $startingRoutes;
     public $startingRequest;
+    public $connection;
 
     public function __construct()
     {
@@ -38,6 +40,10 @@ class StartingApplication implements InterfaceStartingApplication
         // Starting Environments
         $environments = new StartingEnvironments;
         $environments->starting();
+
+        // Starting connection with Database
+        $database = new PDOConnection();
+        $this->connection = $database->connection(SelectDriver::driver());
 
         // Security One
         $securityOne = $startingShieldForce->starting(

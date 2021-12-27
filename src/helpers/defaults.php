@@ -33,7 +33,7 @@ function csrf_token($refresh=false)
     return $_SESSION["_token"];
 }
 
-function envSystem($key, $value)
+function envSystem($key, $value=null)
 {
-    return !isset($value) ? getenv($key) : putenv($key."=".$value);
+    return !isset($value) ? trim(getenv($key)) : putenv(trim($key."=".$value));
 }
