@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'aa6731e4664c9d07f04f07609cca4576105197af',
+        'reference' => '33b75bc592b24817419d159cb0dff3d36dd97ef0',
         'name' => 'alexandrefn/frame-devs',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'aa6731e4664c9d07f04f07609cca4576105197af',
+            'reference' => '33b75bc592b24817419d159cb0dff3d36dd97ef0',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(

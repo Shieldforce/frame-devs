@@ -2,6 +2,8 @@
 
 namespace MVC\controllers\site;
 
+use Core\connections\DB;
+use Core\migrations\Run;
 use MVC\controllers\Controller;
 use MVC\models\User;
 
@@ -9,9 +11,22 @@ class MainController extends Controller
 {
     public function index(array $array = [])
     {
-        echo "<pre>";
-        var_dump(User::all());
-        echo "</pre>";
+        //Run::execute();
+
+        /*$columns = [
+            "id INT IDENTITY(1,1) PRIMARY KEY",
+            "title VARCHAR(191)"
+        ];
+
+        DB::createTable("posts", $columns);*/
+
+        /*User::create([
+            "name" => "Leide Lide"
+        ]);
+
+        dd(["all" => User::all(), "find" => User::find(1)]);*/
+
+
 
         return $this->view($this->routeCurrency["name"]);
     }

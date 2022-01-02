@@ -3,6 +3,7 @@
 namespace Core\connections\drivers;
 
 use Core\connections\interfaces\InterfaceDriver;
+use ManagerUser\connection\SelectDriver;
 use PDO;
 
 class Postgre implements InterfaceDriver
@@ -18,6 +19,7 @@ class Postgre implements InterfaceDriver
 
     public function __construct()
     {
+
         $this->host = envSystem("DB_HOST");
         $this->port = envSystem("DB_PORT");
         $this->db = envSystem("DB_NAME");
@@ -57,7 +59,7 @@ class Postgre implements InterfaceDriver
         return $select->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function find($table, $primary_key_value)
+    public static function find($table, $primary_key_value)
     {
         $class = new static();
         $pdo = $class->connection();
@@ -121,7 +123,7 @@ class Postgre implements InterfaceDriver
         return $select->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    private function primaryKeyTable($table)
+    public function primaryKeyTable($table)
     {
         $array = [];
         foreach ($this->keysTable($table) as $column)

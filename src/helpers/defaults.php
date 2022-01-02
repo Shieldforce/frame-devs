@@ -1,5 +1,7 @@
 <?php
 
+use MVC\models\User;
+
 function asset($path)
 {
     return "../../../../../../".$path;
@@ -36,4 +38,14 @@ function csrf_token($refresh=false)
 function envSystem($key, $value=null)
 {
     return !isset($value) ? trim(getenv($key)) : putenv(trim($key."=".$value));
+}
+
+function dd($data)
+{
+    echo "<pre>";
+    print_r([
+        "A melhor forma de debugar!" => $data
+    ]);
+    echo "</pre>";
+    die;
 }

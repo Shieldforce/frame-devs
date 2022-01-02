@@ -10,4 +10,14 @@ class DB
     {
         return SelectDriver::driver();
     }
+
+    public static function createTable($nameTable, ...$columns)
+    {
+        $class = new static();
+        $pdo = $class::driver()->connection();
+        $implode = implode(",", $columns[0]);
+        $statement =
+            "CREATE TABLE {$nameTable}({$implode});";
+        return $pdo->exec($statement);
+    }
 }

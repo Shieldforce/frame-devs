@@ -15,7 +15,7 @@ class Model
         $this->driver = DB::driver();
     }
 
-    public function find($id)
+    public static function find($id)
     {
         $class = new static();
         $execute = $class->driver->find($class->table, $id);

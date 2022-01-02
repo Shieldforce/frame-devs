@@ -6,7 +6,7 @@ use Core\connections\interfaces\InterfaceDriver;
 use ManagerUser\connection\SelectDriver;
 use PDO;
 
-class Mysql implements InterfaceDriver
+class Mssql implements InterfaceDriver
 {
     protected $host;
     protected $port;
@@ -25,18 +25,31 @@ class Mysql implements InterfaceDriver
         $this->user = envSystem("DB_USER");
         $this->password = envSystem("DB_PASSWORD");
         $this->driver = envSystem("DB_DRIVER");
-        $this->charset = envSystem("DB_CHARSET");
-        $this->dns = "{$this->driver}:host={$this->host};dbname={$this->db};port={$this->port};charset={$this->charset}";
+        $this->dns = "{$this->driver}:Server={$this->host},{$this->port};Database={$this->db};";
     }
 
     public function connection()
     {
+        try {
 
-        $pdo = new PDO($this->dns, $this->user, $this->password, [
-            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'',
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        ]);
-        return $pdo;
+            $pdo = new PDO($this->dns, $this->user, $this->password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+
+        } catch (\PDOException $exception) {
+
+            $message = "Drivers available: " . implode(",", PDO::getAvailableDrivers());
+            $message .= "\nError: " . $exception->getMessage();
+
+            $render = new \Core\renderErrors\Render();
+            $render->view("errors.main.throwableDefault", [
+                "code" => $exception->getCode(),
+                "message" => $message,
+                "file" => $exception->getFile(),
+                "line" => $exception->getLine(),
+            ]);
+            die;
+        }
 
     }
 
@@ -125,17 +138,33 @@ class Mysql implements InterfaceDriver
     {
         $class = new static();
         $pdo = $class->connection();
-        $sql = "SHOW INDEX FROM $table WHERE Key_name = 'PRIMARY'";
+        $sql = "SELECT 
+                KEYS.table_schema, KEYS.table_name, KEYS.column_name, KEYS.ORDINAL_POSITION 
+                FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE keys
+                INNER JOIN INFORMATION_SCHEMA.TABLE_CONSTRAINTS CONS 
+                    ON cons.TABLE_SCHEMA = keys.TABLE_SCHEMA 
+                    AND cons.TABLE_NAME = keys.TABLE_NAME 
+                    AND cons.CONSTRAINT_NAME = keys.CONSTRAINT_NAME
+                WHERE cons.CONSTRAINT_TYPE = 'PRIMARY KEY'";
         $prepare = $pdo->prepare($sql);
         $prepare->execute();
-        return $prepare->fetch()["Column_name"];
+        foreach ($prepare->fetchAll() as $value)
+        {
+            if($value["table_name"]==$table)
+            {
+                return $value["column_name"];
+            }
+        }
+        return false;
     }
 
     public function keysTable($table)
     {
         $class = new static();
         $pdo = $class->connection();
-        $sql = "DESCRIBE $table";
+        $sql = "SELECT COLUMN_NAME 
+                FROM INFORMATION_SCHEMA.COLUMNS
+                WHERE TABLE_NAME = '{$table}'";
         $prepare = $pdo->prepare($sql);
         $prepare->execute();
         return $prepare->fetchAll();
@@ -146,7 +175,7 @@ class Mysql implements InterfaceDriver
         $array = [];
         foreach ($this->keysTable($table) as $column)
         {
-            $array[] = $column["Field"];
+            $array[] = $column["COLUMN_NAME"];
         }
         return $array;
     }
